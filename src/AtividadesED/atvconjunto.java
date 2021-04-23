@@ -64,9 +64,9 @@ public class atvconjunto {
         }
     }
     //essa função retorna se o aluno está matriculado ou não
-    public String checandomatricula (String nome){
-        String resp ="Aluno Matriculado";
-        String respn ="Aluno não Matriculado";
+    // e o localiza no vetor
+    public int checandomatricula (String nome){
+
         //chamando a lista
        var lista = listaalunos();
        //convertendo ela de linked list para array para fazer a comparação
@@ -74,10 +74,14 @@ public class atvconjunto {
         //aqui a comparação
     for(int i = 0; i < array.length; i++) {
         if (nome.equals(array[i])) {
-        return resp;
+            //vendo a localização do nome no vetor
+         var numero =   this.calcularPosicao(nome);
+         //retornando a localização dele
+        return numero;
         }
     }
-    return respn;
+    System.out.println("Aluno não matriculado");
+        return 0;
     }
 
     //está função retira um nome e coloca outro, ela não "substitui" porque o linkedlist
@@ -90,4 +94,24 @@ public class atvconjunto {
      }
      
  }
-}
+
+ // função para mostrar o tamanho da lista
+    public void tamanholista (){
+        //vendo aqui o tamanho da lista
+        var size= this.alunos.size();
+        //var j é o contador de matriculados
+        var j=0;
+        //chamando a lista
+        var lista = listaalunos();
+        //convertendo ela de linked list para array para fazer a comparação
+        Object[] array = lista.toArray();
+        //aqui a comparação
+        for(int i = 0; i < array.length; i++) {
+            if (array[i] != null) {
+           //somando alunos matriculados
+            j++;
+            }
+
+    }
+        System.out.println("O tamanho da lista é de: " + size + " e o total de matriculados é de: "+j);
+}}

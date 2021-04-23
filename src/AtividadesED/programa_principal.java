@@ -30,13 +30,16 @@ public class programa_principal {
         System.out.println(lista);
 
         //checando se o aluno está matriculado ou não
-        var matriculado_ou_nao = classealunos.checandomatricula("asdvdfv");
-        System.out.println(matriculado_ou_nao);
+        var matriculado_ou_nao = classealunos.checandomatricula("Aline Radidie");
+        System.out.println("O aluno Aline Radidie está na posição " +matriculado_ou_nao + " do vetor");
 
         classealunos.editandoarray("Aline Radidie","Akine Souza");
 
         lista = classealunos.listaalunos();
         System.out.println(lista);
+
+        //mostrando o tamanho da lista
+        classealunos.tamanholista();
 
     }
 }

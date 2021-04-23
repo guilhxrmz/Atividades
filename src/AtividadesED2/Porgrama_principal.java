@@ -1,0 +1,15 @@
+package AtividadesED2;
+
+public class Porgrama_principal {
+    public static void main(String[] args) {
+
+        Pesquisas_formas pesquisas_formas = new Pesquisas_formas();
+
+        pesquisas_formas.posicoes();
+        pesquisas_formas.sequencial(115);
+        var listaretorno =pesquisas_formas.sequencialordenada(112);
+        System.out.println("/////////////////////////////////////////////");
+
+
+    }
+}
