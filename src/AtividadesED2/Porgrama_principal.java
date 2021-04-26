@@ -7,8 +7,10 @@ public class Porgrama_principal {
 
         pesquisas_formas.posicoes();
         pesquisas_formas.sequencial(115);
-        var listaretorno =pesquisas_formas.sequencialordenada(112);
         System.out.println("/////////////////////////////////////////////");
+        pesquisas_formas.sequencialordenada(112);
+        System.out.println("/////////////////////////////////////////////");
+        pesquisas_formas.binaria(142);
 
 
     }

@@ -19,7 +19,7 @@ public class Pesquisas_formas {
 
         for (int i = 0; i < agenda.length; i++) {
             if (numero == agenda[i]) {
-            System.out.println("Numero localizado na posição: " + i);
+            System.out.println("Encontrou o número no " + i + "° giro!");
             }
         }
     }
@@ -29,23 +29,46 @@ public class Pesquisas_formas {
     //o restante desce uma casa, funciona basicamente como "mais buscados"
     public void sequencialordenada (int numero) {
         valordentroarray = 100;
-        boolean boleano = false;
+
         for (int i = 0; i < agenda.length; i++) {
             if (numero == agenda[i]) {
-                System.out.println("Numero localizado na posição: " + i);
+                System.out.println("Encontrou o número no " + i + "° giro!");
                 var x = agenda[i];
                 System.out.println("realocando dados");
                 for (int j = i; j > 0; j--) {
                     i--;
                     agenda[j]=agenda[i];
-                    System.out.println(agenda[j]);
+                    System.out.print(agenda[j]+", ");
                 }
                 agenda [0] = x;
                 System.out.println(agenda[0]);
-
             }
-
         }
-
     }
+    //a pesquisa binaria corta a busca sempre pela metade oque faz com que ela localize itens mais facilmente
+    public void binaria (int numero){
+            int i = 0;
+            int menor = 0;
+            int maior = agenda.length - 1;
+            int metade;
+
+            while(menor <= maior)
+            {
+                i++;
+                metade =(menor + maior) / 2;
+
+                if(agenda[metade] == numero) {
+                    System.out.println("Encontrou o número no " + i + "° giro!");
+                    return;
+                }
+                if(agenda[metade] < numero) {
+                    menor = metade + 1;
+                }
+                else {
+                    maior = metade - 1;
+                }
+            }
+    }
+    
+    //
 }
