@@ -45,6 +45,7 @@ public class Pesquisas_formas {
             }
         }
     }
+
     //a pesquisa binaria corta a busca sempre pela metade oque faz com que ela localize itens mais facilmente
     public void binaria (int numero){
             int i = 0;
@@ -69,6 +70,6 @@ public class Pesquisas_formas {
                 }
             }
     }
-    
-    //
+
+    // fim
 }

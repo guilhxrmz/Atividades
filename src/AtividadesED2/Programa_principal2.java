@@ -1,6 +1,6 @@
 package AtividadesED2;
 
-public class Porgrama_principal {
+public class Programa_principal2 {
     public static void main(String[] args) {
 
         Pesquisas_formas pesquisas_formas = new Pesquisas_formas();
