@@ -25,6 +25,8 @@ public class principalp {
 
         cartãoDeCredito.addcartao("Julia Motta", dataManipulacao.plusDays(12));
 
+        cartãoDeCredito.addcartao("Alex Braga", dataManipulacao.plusDays(18));
+
         var ordenado = cartãoDeCredito.organizaporvalidade();
 
     }

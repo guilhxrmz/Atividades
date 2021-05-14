@@ -20,13 +20,14 @@ public class CartãoDeCredito {
 
     public LinkedHashMap organizaporvalidade() {
         //organizando as datas do menor para o maior
-        LinkedHashMap<LocalDate, String> mapaordenado = Mapcartao.entrySet() //
+        LinkedHashMap<LocalDate, String> mapaordenado = Mapcartao.entrySet()
                 .stream().sorted(Map.Entry.comparingByKey())
                 .collect(Collectors.toMap(Map.Entry::getKey,
                 Map.Entry::getValue,(key, content) -> content,
                 LinkedHashMap::new));
         //printando o mapa ordenado
         System.out.println(mapaordenado);
+
         //retornando para o usuario
         return mapaordenado;
 
