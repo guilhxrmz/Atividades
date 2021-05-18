@@ -16,6 +16,7 @@ public class principalp {
         metodosDeOrganizacao.SelectionSort(vetor);
 
         metodosDeOrganizacao.InsertionSort(vetor);
+
         LocalDate dataManipulacao = LocalDate.now();
         cartãoDeCredito.addcartao("Luis Ricardo", LocalDate.now());
 
