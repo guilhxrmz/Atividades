@@ -2,8 +2,7 @@ package AtividadesED7;/* Criado por: profa. Divani Barbosa Gavinier
    Curriculo Lattes: http://lattes.cnpq.br/8503400830635447
    divanibarbosa@gmail.com
 */
-import java.io.*;   
-import java.util.*; 
+import java.util.*;
 
 class No {
   public long item;
@@ -161,8 +160,12 @@ class Tree {
     System.out.print("\n Quantidade de Nós: " + contarNos(root));
     if (root != null ) {  // se arvore nao esta vazia
        System.out.print("\n Valor minimo: " + min().item);
-       System.out.println("\n Valor maximo: " + max().item);
+       System.out.println(" Valor maximo: " + max().item);
     }
+
+    System.out.println(" é balanceada?: ");
+    var mostrabalanceio = balanceado(root);
+    System.out.print(" "+mostrabalanceio);
   }
 
   public void inOrder(No atual) {
@@ -199,7 +202,21 @@ class Tree {
 	   return ( 1 + altura(atual.dir) );
      }
   }
-  
+
+// algoritmo acrescentado para verificar o balanceamento
+  public boolean balanceado(No atual) {
+    int alturaesq = 1 + altura(atual.esq);
+    int alturadir = 1 + altura(atual.dir);
+    boolean balanceio = true;
+    if ((alturadir-alturaesq)>1 || (alturadir-alturaesq)<-1 ){
+      balanceio = false;
+    }
+    System.out.println(alturadir + " " + alturaesq);
+
+    return balanceio;
+  }
+  // termina aqui o algoritimo acrecentado  por @guilhxrmz
+
   public int folhas(No atual) {
     if(atual == null) return 0;
     if(atual.esq == null && atual.dir == null) return 1;
@@ -251,6 +268,7 @@ class ArvoreBinariaApp {
 	System.out.print("\n***********************************");
 	System.out.print("\n-> ");
 	opcao = le.nextInt();
+
 	switch(opcao) {
 	 	case 1: {
 		       System.out.print("\n Informe o valor (long) -> ");
